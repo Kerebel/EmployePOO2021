@@ -12,12 +12,14 @@ and open the template in the editor.
     <body>
         <?php
         include 'classes/Employe.php';
+        include 'classes/Projet.php';
         include 'includes/Traitement.php';
         
         try{
-            Traitement::instanciationUnEmploye();
-            Traitement::instanciationUnEmployeErreur();
-            Traitement::instanciationUnEmploye();
+            //Traitement::instanciationUnEmploye();
+            // Traitement::instanciationUnEmployeErreur();
+            // Traitement::instanciationUnEmploye();
+            Traitement::instanciationProjetV1();
         } catch (Exception $ex) {
               echo $ex->getMessage();
         }
