@@ -14,6 +14,7 @@ and open the template in the editor.
         include 'classes/Employe.php';
         include 'classes/Projet.php';
         include 'classes/EmployeInformaticien.php';
+        include 'classes/EmployeNonInformaticien.php';
         include 'includes/Traitement.php';
         
         try{
@@ -22,7 +23,10 @@ and open the template in the editor.
 //             Traitement::instanciationUnEmploye();
 //            Traitement::instanciationProjetV1();
 //            Traitement::instanciationEmployeInformaticienV1();
-            Traitement::instanciationEmployeInformaticienV2();
+//            Traitement::instanciationEmployeInformaticienV2();
+//            Traitement::instanciationEmployeNonInformaticienV1();
+            Traitement::instanciationEmployeNonInformaticienV2();
+            
         } catch (Exception $ex) {
               echo $ex->getMessage();
         }

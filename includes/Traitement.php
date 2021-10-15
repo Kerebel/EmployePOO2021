@@ -32,5 +32,21 @@ class Traitement {
         $informaticien->setPrimeM(600);
         echo "Nouvelle prime = " . $informaticien->getPrimeM();
     }
+    public static function instanciationEmployeNonInformaticienV1(){
+        $nonInformaticien =  new EmployeNonInformaticien(4, 'Duvernon', 'Hélène', new DateTime("1987/06/19"), 1150);
+        echo "<p>";
+        echo $nonInformaticien;
+        echo "</p>";
+        $nonInformaticien->setPrimeA(400);
+        echo "Nouvelle prime = " . $nonInformaticien->getPrimeA();
+    }
+    public static function instanciationEmployeNonInformaticienV2(){
+        $nonInformaticien =  new EmployeNonInformaticien(5, 'Roman', 'Denis', new DateTime("1992/06/25"), 13000);
+        echo "<p>";
+        echo $nonInformaticien;
+        echo "</p>";
+        $nonInformaticien->setPrimeA(14000);
+        echo "Nouvelle prime = " . $nonInformaticien->getPrimeA();
+    }
 }
 
