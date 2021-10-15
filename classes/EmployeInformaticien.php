@@ -8,20 +8,31 @@
 
 class EmployeInformaticien extends Employe{
     protected float $primeM;
+    protected Projet $projet;
     
 
-    public function __construct(int $pnum, string $pnom, string $pprenom, DateTime $pddn, float $psalaire, Projet $objProjet, float $primeM) {
+    
+    public function __construct(int $pnum, string $pnom, string $pprenom, DateTime $pddn, float $psalaire, Projet $objProjet) {
         parent::__construct($pnum, $pnom, $pprenom, $pddn, $psalaire, $objProjet);
-        $this->primeM = $primeM;
+        $this->primeM = 0;
+        $this->projet= $objProjet;
     }
 
     function getPrimeM(): float {
         return $this->primeM;
     }
     function setPrimeM(float $primeM): void {
-        $this->primeM = $primeM;
+        if($primeM <= ($this->salaireM*0.3)){
+            $this->primeM = $primeM;
+        }
+        else{
+            throw new Exception("La prime mensuelle d'un informaticien ne peut excéder plus de 30% de son salaire mensuel");
+        }
+    }
+    function getProjet(): Projet {
+        return $this->projet;
     }
     public function __toString(): string {
-        return parent::__toString() . " - " . $this->primeM;
+        return parent::__toString() . " - " . $this->projet;
     }
 }

@@ -23,5 +23,14 @@ class Traitement {
     echo $informaticien;
     echo $p;
     }
+    public static function instanciationEmployeInformaticienV2() {
+        $p = new Projet('PR8', 'Association Bolide', 34);
+        $informaticien = new EmployeInformaticien(3, 'Juvani', 'Adèle', new DateTime("1990/12/09"), 1100, $p);
+        echo "<p>";
+        echo $informaticien;
+        echo "</p>";
+        $informaticien->setPrimeM(600);
+        echo "Nouvelle prime = " . $informaticien->getPrimeM();
+    }
 }
 
