@@ -14,5 +14,14 @@ class Traitement {
         echo $p ;
         echo "Nom du projet = " . $p->getNomProjet();
     }
+    
+    public static function instanciationEmployeInformaticienV1(): void {
+    $p = new Projet('PR7', 'Librairie Gelistout', 102);
+    $informaticien= new EmployeInformaticien(2, 'Dimont', 'Patrick', new DateTime("1980/07/12"), 1200, $p, 102);
+    echo "Nom du projet de l'employé numéro" . $informaticien->getNumero() . " : " .$p->getNomProjet();
+    echo "<br>";
+    echo $informaticien;
+    echo $p;
+    }
 }
 
