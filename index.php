@@ -25,7 +25,7 @@ and open the template in the editor.
 //            Traitement::instanciationEmployeInformaticienV1();
 //            Traitement::instanciationEmployeInformaticienV2();
 //            Traitement::instanciationEmployeNonInformaticienV1();
-            Traitement::instanciationEmployeNonInformaticienV2();
+            Traitement::testGainAnnuel();
             
         } catch (Exception $ex) {
               echo $ex->getMessage();

@@ -20,6 +20,9 @@ class EmployeNonInformaticien extends Employe{
         $this->primeA = $this->getSalaireM();
         }
     }
+    public function gainAnnuel(): float {
+        return $this->getSalaireM() * 12 + $this->getPrimeA();
+    }
     public function __toString(): string {
         return parent::__toString() . " - " . "<br>Prime annuelle : " . $this->primeA;
     }

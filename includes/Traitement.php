@@ -1,14 +1,14 @@
 <?php
 
 class Traitement {
-    public static function instanciationUnEmploye() : void{
-        $e = new employe(1, "Dupont", "Jacques", new DateTime("1980/07/12"), 1000.00);
-        echo $e;
-    }
-    public static function instanciationUnEmployeErreur() : void{
-        $e = new employe(1, "Durand", "Sylvie", new DateTime("1975/06/14"), 800.00);
-        echo $e;
-    }
+//    public static function instanciationUnEmploye() : void{
+//        $e = new employe(1, "Dupont", "Jacques", new DateTime("1980/07/12"), 1000.00);
+//        echo $e;
+//    }
+//    public static function instanciationUnEmployeErreur() : void{
+//        $e = new employe(1, "Durand", "Sylvie", new DateTime("1975/06/14"), 800.00);
+//        echo $e;
+//    }
     public static function instanciationProjetV1(): void {
         $p = new Projet('PR7', 'Librairie Gelistout', 102);
         echo $p ;
@@ -47,6 +47,24 @@ class Traitement {
         echo "</p>";
         $nonInformaticien->setPrimeA(14000);
         echo "Nouvelle prime = " . $nonInformaticien->getPrimeA();
+    }
+    public static function testGainAnnuel(){
+        $p = new Projet('PR7', 'Librairie Gelistout', 102);
+        $informaticien = new EmployeInformaticien(2, 'Dimont', 'Patrick', new DateTime("1980/07/12"), 1200, $p);
+        $informaticien->setPrimeM(200);
+        echo "<p>";
+        echo $informaticien . " - Gain annuel : " . $informaticien->gainAnnuel();
+        echo "</p>";
+        $nonInformaticien = new EmployeNonInformaticien(5, 'Roman', 'Denis', new DateTime("1992/06/25"), 1300);
+        $nonInformaticien->setPrimeA(1200);
+        echo"<p>";
+        echo $nonInformaticien . " - Gain annuel : " .$nonInformaticien->gainAnnuel();
+        echo "</p>";
+        $nonInformaticien = new EmployeNonInformaticien(5, 'Roman', 'Denis', new DateTime("1992/06/25"), 1300);
+        $nonInformaticien->setPrimeA(1400);
+        echo "<p>";
+        echo $nonInformaticien . " - Gain annuel : " .$nonInformaticien->gainAnnuel();
+        echo "</p>";
     }
 }
 

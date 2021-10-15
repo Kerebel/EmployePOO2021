@@ -32,6 +32,9 @@ class EmployeInformaticien extends Employe{
     function getProjet(): Projet {
         return $this->projet;
     }
+    public function gainAnnuel(): float {
+        return $gainAnnuel = ($this->getSalaireM() + $this->getPrimeM())*12;
+    }
     public function __toString(): string {
         return parent::__toString() . " - " . $this->projet;
     }
