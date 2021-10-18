@@ -1,4 +1,11 @@
 <?php
+namespace App\includes;
+
+use ClassesMetier\DRH\EmployeInformaticien;
+use ClassesMetier\DRH\EmployeNonInformaticien;
+use ClassesMetier\RD\Projet;
+use DateTime;
+
 
 class Traitement {
 //    public static function instanciationUnEmploye() : void{

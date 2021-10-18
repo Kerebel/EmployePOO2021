@@ -1,0 +1,17 @@
+{
+    "name": "vendor/employe-p-o-o2021",
+    "description": "Description of project EmployePOO2021.",
+    "authors": [
+        {
+            "name": "basti",
+            "email": "your@email.here"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\" : "./",
+            "ClassesMetier\\" : "classes/"
+        }
+    }
+}

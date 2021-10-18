@@ -1,4 +1,8 @@
 <?php
+namespace ClassesMetier\DRH;
+
+
+use DateTime;
 
 abstract class Employe {
     protected int $numero;
